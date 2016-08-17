@@ -26,6 +26,8 @@ public class TaskTest {
     public void shouldCreateAnInstanceOfTask() throws Exception {
         Task t = new Task();
         assertThat(t, instanceOf(Task.class));
+        assertTrue(t.getCreatedAt().getTime() > 0);
+        //assertTrue(t.getUpdatedAt().getTime() > 0);
     }
 
     @Test
@@ -49,13 +51,13 @@ public class TaskTest {
         assertEquals("Home", t.getCategory());
     }
 
-//    @Test
-////    @Ignore
-////    public void shouldGetAndSetDueDateOnTask() throws Exception {
-////        Task t = new Task();
-////        t.setDueDate(format.parse("2016-08-20"));
-////        assertEquals("Sat 2016-08-20 ", t.getDue().toString());
-//    }
+    @Test
+    @Ignore
+    public void shouldGetAndSetDueDateOnTask() throws Exception {
+        Task t = new Task();
+        t.setDue(format.parse("2016-08-20"));
+        assertEquals("Sat 2016-08-20 ", t.getDue().toString());
+    }
 
     @Test
     public void shouldGetAndSetIsCompletedOnTask() throws Exception {
@@ -66,14 +68,14 @@ public class TaskTest {
 
 
 // TODO: create test for createdAT and updatedAT
-
-    @Test
-    public void shouldCreateAnInstanceOfTask() throws Exception {
-        Task t = new Task();
-        assertThat(t, instanceOf(Task.class));
-        assertTrue(t.getCreatedAt().getTime() > 0);
-        assertTrue(t.getUpdatedAt().getTime() > 0);
-    }
+//
+//    @Test
+//    public void shouldCreateAnInstanceOfTask() throws Exception {
+//        Task t = new Task();
+//        assertThat(t, instanceOf(Task.class));
+//        assertTrue(t.getCreatedAt().getTime() > 0);
+//        assertTrue(t.getUpdatedAt().getTime() > 0);
+//    }
 
     @Test
     public void shouldUpdateTheTimeOnTask() throws Exception {

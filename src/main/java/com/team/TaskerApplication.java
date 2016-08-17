@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskmasterApplication {
+public class TaskerApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TaskmasterApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(TaskerApplication.class, args);
+    }
 }
